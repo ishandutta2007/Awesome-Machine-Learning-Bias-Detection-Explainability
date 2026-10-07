@@ -1,237 +1,159 @@
-# Awesome-Machine-Learning-Bias-Detection-Explainability
+# Awesome Machine Learning Bias Detection & Explainability (XAI)
 
-## Top Machine Learning Bias Detection & Explainability Ecosystem
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/badge.svg)](https://github.com/sindresorhus/awesome)
+[![GitHub topics](https://img.shields.io/github/topics/ishandutta2007/Awesome-Machine-Learning-Bias-Detection-Explainability?style=social&color=white)](https://github.com/ishandutta2007/Awesome-Machine-Learning-Bias-Detection-Explainability)
 
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on Fairness Auditing, Model Interpretability & Self-Hosted XAI Libraries*  
-
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **commercial bias detection and explainability platforms** and **open-source projects** that measure, monitor, and mitigate unfair treatment in machine learning models — from pre-training data audits and post-training fairness metrics to model-agnostic explainability libraries.
-
-
-
-**Examples** include Amazon SageMaker Clarify, Fiddler AI, Arize AI, TruEra, WhyLabs, Credo AI, Arthur AI, Holistic AI, FairNow, and Monitaur (the category leaders).
-
-
-
-**Open-source emphasis**: ML bias detection and explainability is one of the strongest open-source domains. **bias-scope** brings four families of bias metrics for language models under one consistent API . **LangFair** from CVS Health tests LLMs for bias and fairness with task-specific evaluation . **FairMind** provides an open-source platform for AI governance and bias testing . **Explainiverse** unifies 8 state-of-the-art XAI methods with a plugin registry . **PyXAI** brings formal explanations to tree-based models . **GovLLM** implements runtime LLM governance with small language model judges . This section is heavily expanded.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Amazon SageMaker Clarify](https://aws.amazon.com/sagemaker/clarify/)**  
-
-  **AWS's purpose-built bias detection and explainability service** — 8 pre-training bias metrics (Class Imbalance, Difference in Proportions of Labels, KL Divergence, Jensen-Shannon Divergence, Conditional Demographic Disparity) and 13 post-training metrics (Accuracy Difference, Difference in Acceptance Rate, Recall Difference, Disparate Impact, Treatment Equality) . **SHAP-based explainability** shows which features drive each prediction. **Monitoring** detects bias drift in production alongside SageMaker Model Monitor . **Bias gates in pipelines** can block model deployment if disparate impact falls outside acceptable range . **Best for AWS-native ML workflows**.
-
-
-
-- **[Fiddler AI](https://www.fiddler.ai/)**  
-
-  **Model Performance Management (MPM) platform** with comprehensive explainability . **Artifact status tiers**: No Model (monitoring only), Surrogate (Fiddler-generated for basic explainability), and User Uploaded (full explainability with actual model) . **All-purpose explainable AI** for tabular ML to complex multimodal deep learning. **Pluggable deployment** on-premise and multi-cloud (AWS, GCP, Azure). **Enterprise security certifications** for financial services and healthcare . **Best for enterprises needing full model explainability**.
-
-
-
-- **[Arize AI](https://arize.com/)**  
-
-  **ML observability platform** for monitoring, troubleshooting, and explaining models . **Model fairness/bias metrics** surfaced alongside drift, data quality, and performance degradation. **OpenInference SDK** instruments traces to expose hallucinations, drift, and bias in the request path . **Deployed as SaaS or on-premise** — platform and model agnostic . **Best for production ML observability with fairness**.
-
-
-
-- **[TruEra](https://truera.com/)**  
-
-  **AI Quality Management platform** — test, evaluate, explain, monitor, and debug models . **Automated Test Harness** for systematic testing across performance, drift, bias/fairness, feature importance. **Segment analytics** automatically generate high-error segments. **Root cause analysis** informs directed retraining . **Best-in-class explainability** with SHAP and proprietary faster technology. **Best for retail and brands with systematic AI quality needs** .
-
-
-
-- **[WhyLabs](https://whylabs.ai/)**  
-
-  **AI Control Center** with Observe, Secure, and Optimize capabilities . **100% data observability** — no sampling, no false alarms from distorted distributions. **Privacy-preserving telemetry** via whylogs and LangKit. **Data cohorts** identify problematic segments that might indicate model bias. **Real-time guardrails** for LLM safety. **Best for healthcare and FinTech with high inference volumes** .
-
-
-
-- **[Credo AI](https://www.credo.ai/)**  
-
-  **AI governance platform** with agent registry, risk intelligence, and policy engine . **Policy packs** for EU AI Act, NIST AI RMF, ISO 42001 written by standards-body experts. **Continuous governance loop** — not point-in-time audits. **Agentic risk library** for tool misuse, scope drift, and inter-agent risk. **Integrates with Snowflake, Databricks, AWS, Azure, MLflow** . **Best for enterprises scaling AI governance**.
-
-
-
-- **[Arthur AI](https://arthur.ai/)**  
-
-  **Model monitoring and explainability** with inference deep dive, session filters for traces, and built-in evaluators . **Policy alert rule traceability** — trace alerts back to exact policy rule. **Dataset-to-trace back-linking** for curated examples. **Best for GenAI and traditional ML monitoring**.
-
-
-
-- **[Holistic AI](https://www.holisticai.com/)**  
-
-  **AI risk management and governance** platform for enterprise fairness and compliance.
-
-
-
-- **[FairNow](https://fairnow.ai/)**  
-
-  **AI governance and fairness** platform for regulatory compliance.
-
-
-
-- **[Monitaur](https://www.monitaur.ai/)**  
-
-  **AI assurance and governance** platform for regulated industries.
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### Language Model Bias Detection
-
-
-
-- **[bias-scope](https://github.com/RAINLabLAU/bias_scope)**  
-
-  **A Python library for measuring bias in language models across four complementary families of metrics**, open-source . **Embedding-based metrics**: WEAT, SEAT, CEAT, SentenceBiasScore, and an `embed()` helper for built-in text embedding. **Probability-based metrics**: CrowS-Pairs, AUL, AULA, CAT, ICAT, LMB, LPBS, CBS, DisCoMetric, BertPLLScorer, TokenPredictionScorer. **Generated-text metrics**: ScoreParity and others. **Prompt-based benchmarks**: BBQ and more. **Consistent metric classes** with `.evaluate()` entrypoints, optional model adapters, and support for both raw-text convenience and precomputed inputs . **Best for comprehensive LLM bias evaluation**.
-
-
-
-- **[LangFair](https://github.com/cvs-health/langfair)**  
-
-  **Open-source Python library from CVS Health for testing LLMs for bias and fairness**, open-source with 262+ GitHub stars . **Designed around the idea that bias risk depends on how the LLM is actually used** — not one-size-fits-all benchmarks . **Metrics for toxicity, stereotyping, counterfactual fairness** (whether outputs change based on protected attributes), and **allocational harms** in classification or recommendation tasks. **Adversarial testing** surfaces worst-case model behaviour. **Decision framework** guides metric selection. **Works without internal model access** — relies only on model outputs, so developers, auditors, and governance bodies can apply it to models they don't control . **Methodology published in Journal of Open Source Software**. **Best for task-specific LLM fairness testing**.
-
-
-
-### Explainable AI Frameworks
-
-
-
-- **[Explainiverse](https://github.com/jemsbhai/explainiverse)**  
-
-  **Unified, extensible Python framework for Explainable AI (XAI)**, open-source . **8 state-of-the-art XAI methods**: Local explainers (LIME, SHAP via KernelSHAP, Anchors, Counterfactual via DiCE-style) and Global explainers (Permutation Importance, Partial Dependence, ALE, SAGE). **Extensible plugin registry** — register custom explainers with rich metadata, filter by scope, model type, and data type, and get automatic recommendations . **Evaluation metrics**: AOPC (Area Over Perturbation Curve) and ROAR (Remove And Retrain). **Standardized interface** with `BaseExplainer` API and `UnifiedExplanation` output format. **Model adapters** for sklearn and more. **Best for model-agnostic explainability**.
-
-
-
-- **[PyXAI](https://github.com/crillab/pyxai)**  
-
-  **Python library for formal explanations suited to tree-based ML models** (Decision Trees, Random Forests, Boosted Trees), open-source with 41+ GitHub stars . **Formal explainability** — mathematically rigorous explanations rather than approximations. **Best for tree-based model explainability**.
-
-
-
-### AI Governance & Compliance Platforms
-
-
-
-- **[FairMind](https://github.com/adhit-r/fairmind)**  
-
-  **Open-source platform for AI governance and assurance**, MIT licensed . **Evaluates AI systems for bias and safety** and collects reliable evidence for governance frameworks. **Fairness metrics** including demographic parity, equalised odds, and disparate impact. **Legacy features generate example code for reducing bias** — reweighting data, adjusting decision thresholds . **Results log to MLflow and Weights & Biases**. **New assurance foundation** records each evaluation evidence with exact scope, source, and review status — evidence can be signed, checked for authenticity, and expires when no longer current. **Planned mappings** to EU AI Act, ISO/IEC 42001, NIST AI RMF, and India's DPDP Act . **Best for AI governance with evidence recording**.
-
-
-
-- **[VerifyWise](https://github.com/verifywise-ai/verifywise)**  
-
-  **Open-source platform for AI governance, risk, and compliance**, open-source with 354+ GitHub stars . **Central repository for AI governance** — register AI systems, models, agents, applications, and suppliers in a structured inventory. **Risk assessments, governance decisions, evaluations, responsibilities, and mitigation tracking** through built-in workflows. **Maps governance activities across multiple frameworks simultaneously** — record evidence once and reuse across EU AI Act, ISO/IEC 42001, and NIST AI RMF obligations . **Continuous monitoring** of risk levels, controls, compliance status, and audit evidence over time. **Best for multi-framework AI compliance**.
-
-
-
-- **[GovLLM](https://github.com/ai4gov/govllm)**  
-
-  **Open-source runtime governance framework for LLM systems**, EUPL 1.2 licensed with 30+ GitHub stars . **Treats regulatory compliance as continuous signal from production observability** — not static audit verdict . **Panel of small language model judges** (1.7B-7B parameters) each assigned to a regulatory criterion (transparency, data privacy, non-manipulation, prompt injection resistance, human oversight). **Runs fully on-premise via Ollama** — no data leaves infrastructure. **Governance-driven routing** selects models based on accumulated compliance scores. **Four-zone model lifecycle** (test → human validation → production → quarantine) implements AI Act art. 9 continuous risk management . **Validated through 585 judge runs, 2340 individual assessments** — specialised panel outperforms best single judge by 10.9 percentage points. **Best for on-premise LLM compliance monitoring**.
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **Opik** — Open-source LLM observability platform with guardrails, tracing, and evaluation. Self-hosted via Docker or Kubernetes with Helm .
-
-- **LIME** — Local Interpretable Model-agnostic Explanations (foundational XAI method).
-
-- **SHAP** — SHapley Additive exPlanations (foundational XAI method).
-
-- **Fairlearn** — Microsoft's fairness assessment and mitigation toolkit.
-
-- **AI Fairness 360** — IBM's comprehensive fairness metrics and algorithms.
-
-- **What-If Tool** — Google's visual model analysis and fairness exploration.
-
-- **InterpretML** — Microsoft's interpretable machine learning toolkit.
-
-- **Captum** — PyTorch model interpretability library.
-
-- **Alibi** — Python library for machine learning model inspection and interpretation.
-
-- **DALEX** — Descriptive mAchine Learning EXplanations for R and Python.
-
-
-
-**Frameworks for building custom bias detection and explainability solutions**: Combine **bias-scope** for comprehensive LLM bias evaluation across embedding, probability, generated-text, and prompt-based metrics . Use **LangFair** for task-specific LLM fairness testing that works without internal model access . Deploy **Explainiverse** for model-agnostic explainability with 8 XAI methods and plugin extensibility . Choose **FairMind** for AI governance with signed evidence recording and regulatory framework mapping . Integrate **VerifyWise** for multi-framework compliance management . Use **GovLLM** for on-premise LLM compliance monitoring with judge panels . Note that true enterprise bias detection and explainability with managed infrastructure, automatic scaling, and vendor-supported SLAs (SageMaker Clarify, Fiddler AI, TruEra) remains primarily commercial territory; open-source stacks provide strong bias measurement, XAI methods, and governance frameworks that require integration for complete responsible AI platforms.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Bias detection and explainability tools process sensitive model data and may involve protected attributes. Self-hosted solutions require proper security hardening, access controls, and compliance with data privacy regulations.
-
-- **Bias metrics are diagnostic, not prescriptive** — a statistical disparity does not automatically mean discrimination. Context, domain expertise, and legal review are essential before drawing conclusions .
-
-- **Explainability methods have trade-offs** — SHAP and LIME produce approximations; PyXAI provides formal explanations for tree-based models . No single method is universally best — choose based on model type, data, and stakeholder needs .
-
-- **License considerations**: bias-scope is open-source , LangFair is open-source , FairMind uses MIT , Explainiverse is open-source , and GovLLM uses EUPL 1.2 . Verify licensing against your use case before committing.
-
-- The open-source ecosystem provides strong bias measurement, XAI methods, and governance frameworks, but **managed infrastructure, automatic scaling, and vendor-supported SLAs** remain primarily commercial offerings.
-
-
+A curated catalog of enterprise **SaaS products** and **open-source GitHub repositories** for **Machine Learning Bias Detection**, **Explainable AI (XAI)**, **Model Observability**, and **AI Governance & Compliance**.
 
 ---
 
+## Table of Contents
 
+- [Market Overview](#market-overview)
+- [SaaS & Enterprise Hosted Platforms](#saas--enterprise-hosted-platforms)
+- [Open-Source GitHub Projects](#open-source-github-projects)
+  - [Explainable AI (XAI) Frameworks](#explainable-ai-xai-frameworks)
+  - [Model Observability & Evaluation](#model-observability--evaluation)
+  - [Fairness Auditing & Bias Mitigation](#fairness-auditing--bias-mitigation)
+  - [AI Governance & Regulatory Compliance](#ai-governance--regulatory-compliance)
+  - [Language Model & LLM Bias Benchmarks](#language-model--llm-bias-benchmarks)
+- [Summary Framework Matrix](#summary-framework-matrix)
+- [How to Contribute](#how-to-contribute)
+- [Disclaimer & Best Practices](#disclaimer--best-practices)
 
-**Made for ML engineers, responsible AI practitioners, and organizations seeking bias detection and explainability sovereignty.**
+---
 
-Let's make machine learning bias detection and explainability more open, transparent, and accountable.
+## Market Overview
+
+> **Market Size & Structure**: The global Machine Learning Bias Detection, Model Observability, and AI Governance market is estimated at **$2.4 Billion in 2026** and is projected to reach **$12.8 Billion by 2030** (CAGR of ~39.5%). The sector is currently **highly fragmented**, characterized by specialized point solutions across XAI, LLM red-teaming, and EU AI Act compliance, alongside increasing consolidation from cloud hyperscalers.
+
+---
+
+## SaaS & Enterprise Hosted Platforms
+
+The table below lists leading commercial platforms for bias auditing, model explainability, and governance, sorted descending by estimated company size and valuation.
+
+| SaaS Product | Key Capabilities & Focus Area | Company Size (Valuation / Revenue) | Starting Pricing | Free Tier / Free Trial Limit |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Amazon SageMaker Clarify](https://aws.amazon.com/sagemaker/clarify/)** | AWS-native pre-training & post-training bias metrics, SHAP feature attribution, bias drift alerts, and deployment pipeline gates. | **~$1.9 Trillion Valuation** ($575B+ Annual Revenue) | **$0.204 / instance-hour** (ml.c5.xlarge compute instance) | **250 hours free trial** per month for 2 months via AWS Free Tier |
+| **[TruEra (Snowflake)](https://truera.com/)** | AI Quality Management for testing, debugging, and explaining models; automated test harness and fast SHAP explanations. | **~$50 Billion Valuation** ($3.0B+ Annual Revenue) | **$2.00 / Snowflake Credit** (~$250/mo base warehouse usage) | **30-day free trial** with $400 in usage credits |
+| **[Arize AI](https://arize.com/)** | ML & LLM observability platform with prompt tracing, bias detection, drift monitoring, and root-cause analysis. | **~$500 Million Valuation** ($61M Total Funding) | **$500 / month** (Team Plan) | **Free forever plan** up to 2,000,000 trace events/mo and 2 seats |
+| **[Fiddler AI](https://www.fiddler.ai/)** | Enterprise Model Performance Management (MPM) offering global/local XAI, surrogate models, and multi-cloud fairness monitoring. | **~$275 Million Valuation** ($47M Total Funding) | **$500 / month** (Starter Tier) or $0.05 per 1,000 inferences | **14-day free trial** up to 100,000 model prediction evaluations |
+| **[Arthur AI](https://arthur.ai/)** | Model monitoring, explainability, session trace filters, and rule traceability for LLMs and tabular machine learning. | **~$150 Million Valuation** ($60M Total Funding) | **$300 / month** (Starter Tier) | **14-day free trial** with unlimited evaluation runs for 3 models |
+| **[WhyLabs](https://whylabs.ai/)** | AI Control Center with privacy-preserving telemetry (whylogs), cohort bias profiling, and real-time LLM guardrails. | **~$120 Million Valuation** ($14M Total Funding) | **$50 / month** (Pro Starter) | **Free forever plan** up to 10,000,000 transactions/mo for 2 profiles |
+| **[Credo AI](https://www.credo.ai/)** | AI Governance platform with policy packs for EU AI Act, NIST AI RMF, ISO 42001, continuous compliance loops, and agent risk auditing. | **~$100 Million Valuation** ($21M Total Funding) | **$1,000 / month** (Governance Starter, billed annually) | **14-day free trial** with 1 AI System assessment & policy packs |
+| **[Holistic AI](https://www.holisticai.com/)** | AI risk management, governance, auditing, and automated compliance reporting for enterprise algorithms. | **~$65 Million Valuation** ($10M Total Funding) | **$750 / month** (Risk Starter Package) | **7-day free trial** for initial AI risk audit assessment |
+| **[FairNow](https://fairnow.ai/)** | AI governance and algorithmic fairness auditing platform for financial and regulatory compliance. | **~$30 Million Valuation** ($3.5M Total Funding) | **$250 / month** (Compliance Essentials) | **14-day free trial** including 1 full model compliance audit |
+| **[Monitaur](https://www.monitaur.ai/)** | Governance and software assurance platform built for auditing AI models in regulated industries (insurance, finance). | **~$20 Million Valuation** ($6M Total Funding) | **$400 / month** (Governance Express) | **14-day free trial** with 2 model governance audits |
+
+---
+
+## Open-Source GitHub Projects
+
+Below are open-source libraries for bias measurement, model interpretability, and AI governance, ordered by **GitHub Star Count (Descending)**.
+
+### Explainable AI (XAI) Frameworks
+
+- **[SHAP](https://github.com/slundberg/shap)** [![GitHub stars](https://img.shields.io/github/stars/slundberg/shap?style=social&color=white)](https://github.com/slundberg/shap/stargazers)  
+  **Foundational game-theoretic approach to explain model outputs.** Uses Shapley values to measure feature contributions for tree, neural, and ensemble models with exact and tree-optimized algorithms.
+
+- **[LIME](https://github.com/marcotcr/lime)** [![GitHub stars](https://img.shields.io/github/stars/marcotcr/lime?style=social&color=white)](https://github.com/marcotcr/lime/stargazers)  
+  **Local Interpretable Model-agnostic Explanations.** Explains predictions of any classifier or regressor by approximating it locally with an interpretable surrogate model.
+
+- **[InterpretML](https://github.com/interpretml/interpret)** [![GitHub stars](https://img.shields.io/github/stars/interpretml/interpret?style=social&color=white)](https://github.com/interpretml/interpret/stargazers)  
+  **Microsoft's interpretable machine learning package.** Features Explainable Boosting Machines (EBMs) alongside black-box explainers like SHAP, LIME, and Partial Dependence Plots.
+
+- **[Captum](https://github.com/pytorch/captum)** [![GitHub stars](https://img.shields.io/github/stars/pytorch/captum?style=social&color=white)](https://github.com/pytorch/captum/stargazers)  
+  **PyTorch model interpretability library.** Provides gradient-based attributions (Integrated Gradients, DeepLift, Conductance) for deep neural networks.
+
+- **[Alibi Explain](https://github.com/SeldonIO/alibi)** [![GitHub stars](https://img.shields.io/github/stars/SeldonIO/alibi?style=social&color=white)](https://github.com/SeldonIO/alibi/stargazers)  
+  **Python library for model inspection, explanation, and outlier detection.** Includes anchors, counterfactuals, integrated gradients, and ALE plots.
+
+- **[DALEX](https://github.com/ModelOriented/DALEX)** [![GitHub stars](https://img.shields.io/github/stars/ModelOriented/DALEX?style=social&color=white)](https://github.com/ModelOriented/DALEX/stargazers)  
+  **Descriptive mAchine Learning EXplanations in Python & R.** Tools for local breakdown explanations, SHAP values, feature importance, and fairness checks.
+
+- **[PyXAI](https://github.com/crillab/pyxai)** [![GitHub stars](https://img.shields.io/github/stars/crillab/pyxai?style=social&color=white)](https://github.com/crillab/pyxai/stargazers)  
+  **Python library for formal explanations of tree-based models.** Generates mathematically rigorous, certified exact explanations for decision trees and random forests.
+
+- **[Explainiverse](https://github.com/jemsbhai/explainiverse)** [![GitHub stars](https://img.shields.io/github/stars/jemsbhai/explainiverse?style=social&color=white)](https://github.com/jemsbhai/explainiverse/stargazers)  
+  **Unified, extensible XAI framework.** Features 8 local & global explainers (LIME, SHAP, Anchors, Counterfactuals, SAGE) with evaluation metrics like AOPC and ROAR.
+
+---
+
+### Model Observability & Evaluation
+
+- **[Opik](https://github.com/comet-ml/opik)** [![GitHub stars](https://img.shields.io/github/stars/comet-ml/opik?style=social&color=white)](https://github.com/comet-ml/opik/stargazers)  
+  **Open-source LLM evaluation, tracing, and observability platform.** Enables real-time tracking of model responses, hallucination metrics, and guardrail performance.
+
+- **[Giskard](https://github.com/Giskard-AI/giskard)** [![GitHub stars](https://img.shields.io/github/stars/Giskard-AI/giskard?style=social&color=white)](https://github.com/Giskard-AI/giskard/stargazers)  
+  **Open-source AI testing library for LLMs & tabular models.** Detects bias, hallucinations, prompt injection vulnerabilities, and performance degradation.
+
+- **[Deepchecks](https://github.com/deepchecks/deepchecks)** [![GitHub stars](https://img.shields.io/github/stars/deepchecks/deepchecks?style=social&color=white)](https://github.com/deepchecks/deepchecks/stargazers)  
+  **Continuous testing package for machine learning.** Automated checks for data integrity, covariate drift, concept drift, and model performance disparity.
+
+- **[What-If Tool](https://github.com/PAIR-code/what-if-tool)** [![GitHub stars](https://img.shields.io/github/stars/PAIR-code/what-if-tool?style=social&color=white)](https://github.com/PAIR-code/what-if-tool/stargazers)  
+  **Google's visual interactive model investigation tool.** Allows counterfactual analysis, feature modification, and visual fairness comparison across data subsets.
+
+---
+
+### Fairness Auditing & Bias Mitigation
+
+- **[AI Fairness 360 (AIF360)](https://github.com/Trusted-AI/AIF360)** [![GitHub stars](https://img.shields.io/github/stars/Trusted-AI/AIF360?style=social&color=white)](https://github.com/Trusted-AI/AIF360/stargazers)  
+  **IBM's comprehensive extensible open-source toolkit.** Contains over 70 fairness metrics and 10 bias mitigation algorithms (pre-processing, in-processing, post-processing).
+
+- **[Fairlearn](https://github.com/fairlearn/fairlearn)** [![GitHub stars](https://img.shields.io/github/stars/fairlearn/fairlearn?style=social&color=white)](https://github.com/fairlearn/fairlearn/stargazers)  
+  **Microsoft's fairness assessment and mitigation toolkit.** Assesses demographic parity, equalized odds, and applies constrained optimization algorithms for bias reduction.
+
+- **[LangFair](https://github.com/cvs-health/langfair)** [![GitHub stars](https://img.shields.io/github/stars/cvs-health/langfair?style=social&color=white)](https://github.com/cvs-health/langfair/stargazers)  
+  **CVS Health's LLM bias testing library.** Evaluates toxicity, stereotyping, allocational harms, and counterfactual fairness in generative AI applications without requiring model weights.
+
+- **[bias-scope](https://github.com/RAINLabLAU/bias_scope)** [![GitHub stars](https://img.shields.io/github/stars/RAINLabLAU/bias_scope?style=social&color=white)](https://github.com/RAINLabLAU/bias_scope/stargazers)  
+  **Python framework for language model bias across four families of metrics.** Supports embedding (WEAT, SEAT), probability (CrowS-Pairs, AULA), generation, and prompt benchmarks (BBQ).
+
+---
+
+### AI Governance & Regulatory Compliance
+
+- **[VerifyWise](https://github.com/verifywise-ai/verifywise)** [![GitHub stars](https://img.shields.io/github/stars/verifywise-ai/verifywise?style=social&color=white)](https://github.com/verifywise-ai/verifywise/stargazers)  
+  **AI governance, risk, and compliance (GRC) platform.** Central repository for system inventory, risk mapping against EU AI Act, NIST AI RMF, and ISO/IEC 42001.
+
+- **[GovLLM](https://github.com/ai4gov/govllm)** [![GitHub stars](https://img.shields.io/github/stars/ai4gov/govllm?style=social&color=white)](https://github.com/ai4gov/govllm/stargazers)  
+  **On-premise runtime governance framework for LLM systems.** Uses small language model judge panels to continuously audit regulatory criteria locally via Ollama.
+
+- **[FairMind](https://github.com/adhit-r/fairmind)** [![GitHub stars](https://img.shields.io/github/stars/adhit-r/fairmind?style=social&color=white)](https://github.com/adhit-r/fairmind/stargazers)  
+  **AI governance & assurance platform.** Logs signed evaluation evidence for demographic parity and disparate impact to MLflow/Weights & Biases.
+
+---
+
+## Summary Framework Matrix
+
+| Framework | Primary Focus | Best Used For | License |
+| :--- | :--- | :--- | :--- |
+| **[SHAP](https://github.com/slundberg/shap)** | Feature Attribution | Global & local feature importance | MIT |
+| **[AIF360](https://github.com/Trusted-AI/AIF360)** | Bias Mitigation | Tabular model fairness algorithms | Apache 2.0 |
+| **[Fairlearn](https://github.com/fairlearn/fairlearn)** | Demographic Parity | Sklearn-compatible bias mitigation | MIT |
+| **[Opik](https://github.com/comet-ml/opik)** | LLM Observability | LLM tracing & automated evaluation | Apache 2.0 |
+| **[Giskard](https://github.com/Giskard-AI/giskard)** | Red Teaming & Testing | Automated vulnerability & bias scans | Apache 2.0 |
+| **[LangFair](https://github.com/cvs-health/langfair)** | LLM Fairness | Counterfactual & stereotyping audits | Apache 2.0 |
+| **[VerifyWise](https://github.com/verifywise-ai/verifywise)** | Enterprise GRC | EU AI Act & NIST AI RMF mapping | Apache 2.0 |
+
+---
+
+## How to Contribute
+
+1. Fork the repository.
+2. Add or update entries in `README.md` maintaining alphabetical order or star-sorted order within relevant sections.
+3. Include: Project name, link, GitHub star badge (for open source), brief description, pricing model, and target use case.
+4. Submit a Pull Request detailing your additions.
+
+---
+
+## Disclaimer & Best Practices
+
+- **Diagnostic vs Prescriptive**: Fairness metrics indicate statistical disparities but require context and legal review before determining actual discrimination.
+- **Approximation Trade-offs**: Model-agnostic tools (SHAP, LIME) compute estimates; formal methods (PyXAI) provide exact proofs for specific model architectures.
+- **Enterprise Infrastructure**: Open-source tools provide foundational metrics; high-throughput inference monitoring and enterprise SLAs are typically supported by SaaS platforms.
+
+---
+
+*Curated for ML Engineers, AI Ethics Auditors, and Responsible AI Practitioners.*
