@@ -59,77 +59,77 @@ The table below lists leading commercial platforms for bias auditing, model expl
 
 ## 🔓 Open-Source GitHub Projects
 
-Below are open-source libraries for bias measurement, model interpretability, and AI governance, ordered by **GitHub Star Count (Descending)**. 🌟
+Below are open-source libraries for bias measurement, model interpretability, and AI governance, ordered by **GitHub Stars_Count (Descending)**. 🌟
 
 ### 🔍 Explainable AI (XAI) Frameworks
 
-- **[SHAP](https://github.com/slundberg/shap)** [![GitHub stars](https://img.shields.io/github/stars/slundberg/shap?style=social&color=white)](https://github.com/slundberg/shap/stargazers)  
+- **[SHAP](https://github.com/slundberg/shap)** [![GitHub_Stars](https://img.shields.io/github/stars/slundberg/shap?style=social&color=white)](https://github.com/slundberg/shap/stargazers)  
   🧠 **Foundational game-theoretic approach to explain model outputs.** Uses Shapley values to measure feature contributions for tree, neural, and ensemble models with exact and tree-optimized algorithms.
 
-- **[LIME](https://github.com/marcotcr/lime)** [![GitHub stars](https://img.shields.io/github/stars/marcotcr/lime?style=social&color=white)](https://github.com/marcotcr/lime/stargazers)  
+- **[LIME](https://github.com/marcotcr/lime)** [![GitHub_Stars](https://img.shields.io/github/stars/marcotcr/lime?style=social&color=white)](https://github.com/marcotcr/lime/stargazers)  
   🍋 **Local Interpretable Model-agnostic Explanations.** Explains predictions of any classifier or regressor by approximating it locally with an interpretable surrogate model.
 
-- **[InterpretML](https://github.com/interpretml/interpret)** [![GitHub stars](https://img.shields.io/github/stars/interpretml/interpret?style=social&color=white)](https://github.com/interpretml/interpret/stargazers)  
+- **[InterpretML](https://github.com/interpretml/interpret)** [![GitHub_Stars](https://img.shields.io/github/stars/interpretml/interpret?style=social&color=white)](https://github.com/interpretml/interpret/stargazers)  
   🔷 **Microsoft's interpretable machine learning package.** Features Explainable Boosting Machines (EBMs) alongside black-box explainers like SHAP, LIME, and Partial Dependence Plots.
 
-- **[Captum](https://github.com/pytorch/captum)** [![GitHub stars](https://img.shields.io/github/stars/pytorch/captum?style=social&color=white)](https://github.com/pytorch/captum/stargazers)  
+- **[Captum](https://github.com/pytorch/captum)** [![GitHub_Stars](https://img.shields.io/github/stars/pytorch/captum?style=social&color=white)](https://github.com/pytorch/captum/stargazers)  
   🔥 **PyTorch model interpretability library.** Provides gradient-based attributions (Integrated Gradients, DeepLift, Conductance) for deep neural networks.
 
-- **[Alibi Explain](https://github.com/SeldonIO/alibi)** [![GitHub stars](https://img.shields.io/github/stars/SeldonIO/alibi?style=social&color=white)](https://github.com/SeldonIO/alibi/stargazers)  
+- **[Alibi Explain](https://github.com/SeldonIO/alibi)** [![GitHub_Stars](https://img.shields.io/github/stars/SeldonIO/alibi?style=social&color=white)](https://github.com/SeldonIO/alibi/stargazers)  
   🛡️ **Python library for model inspection, explanation, and outlier detection.** Includes anchors, counterfactuals, integrated gradients, and ALE plots.
 
-- **[DALEX](https://github.com/ModelOriented/DALEX)** [![GitHub stars](https://img.shields.io/github/stars/ModelOriented/DALEX?style=social&color=white)](https://github.com/ModelOriented/DALEX/stargazers)  
+- **[DALEX](https://github.com/ModelOriented/DALEX)** [![GitHub_Stars](https://img.shields.io/github/stars/ModelOriented/DALEX?style=social&color=white)](https://github.com/ModelOriented/DALEX/stargazers)  
   📊 **Descriptive mAchine Learning EXplanations in Python & R.** Tools for local breakdown explanations, SHAP values, feature importance, and fairness checks.
 
-- **[PyXAI](https://github.com/crillab/pyxai)** [![GitHub stars](https://img.shields.io/github/stars/crillab/pyxai?style=social&color=white)](https://github.com/crillab/pyxai/stargazers)  
+- **[PyXAI](https://github.com/crillab/pyxai)** [![GitHub_Stars](https://img.shields.io/github/stars/crillab/pyxai?style=social&color=white)](https://github.com/crillab/pyxai/stargazers)  
   🌲 **Python library for formal explanations of tree-based models.** Generates mathematically rigorous, certified exact explanations for decision trees and random forests.
 
-- **[Explainiverse](https://github.com/jemsbhai/explainiverse)** [![GitHub stars](https://img.shields.io/github/stars/jemsbhai/explainiverse?style=social&color=white)](https://github.com/jemsbhai/explainiverse/stargazers)  
+- **[Explainiverse](https://github.com/jemsbhai/explainiverse)** [![GitHub_Stars](https://img.shields.io/github/stars/jemsbhai/explainiverse?style=social&color=white)](https://github.com/jemsbhai/explainiverse/stargazers)  
   🌌 **Unified, extensible XAI framework.** Features 8 local & global explainers (LIME, SHAP, Anchors, Counterfactuals, SAGE) with evaluation metrics like AOPC and ROAR.
 
 ---
 
 ### 📊 Model Observability & Evaluation
 
-- **[Opik](https://github.com/comet-ml/opik)** [![GitHub stars](https://img.shields.io/github/stars/comet-ml/opik?style=social&color=white)](https://github.com/comet-ml/opik/stargazers)  
+- **[Opik](https://github.com/comet-ml/opik)** [![GitHub_Stars](https://img.shields.io/github/stars/comet-ml/opik?style=social&color=white)](https://github.com/comet-ml/opik/stargazers)  
   💫 **Open-source LLM evaluation, tracing, and observability platform.** Enables real-time tracking of model responses, hallucination metrics, and guardrail performance.
 
-- **[Giskard](https://github.com/Giskard-AI/giskard)** [![GitHub stars](https://img.shields.io/github/stars/Giskard-AI/giskard?style=social&color=white)](https://github.com/Giskard-AI/giskard/stargazers)  
+- **[Giskard](https://github.com/Giskard-AI/giskard)** [![GitHub_Stars](https://img.shields.io/github/stars/Giskard-AI/giskard?style=social&color=white)](https://github.com/Giskard-AI/giskard/stargazers)  
   🐢 **Open-source AI testing library for LLMs & tabular models.** Detects bias, hallucinations, prompt injection vulnerabilities, and performance degradation.
 
-- **[Deepchecks](https://github.com/deepchecks/deepchecks)** [![GitHub stars](https://img.shields.io/github/stars/deepchecks/deepchecks?style=social&color=white)](https://github.com/deepchecks/deepchecks/stargazers)  
+- **[Deepchecks](https://github.com/deepchecks/deepchecks)** [![GitHub_Stars](https://img.shields.io/github/stars/deepchecks/deepchecks?style=social&color=white)](https://github.com/deepchecks/deepchecks/stargazers)  
   ✅ **Continuous testing package for machine learning.** Automated checks for data integrity, covariate drift, concept drift, and model performance disparity.
 
-- **[What-If Tool](https://github.com/PAIR-code/what-if-tool)** [![GitHub stars](https://img.shields.io/github/stars/PAIR-code/what-if-tool?style=social&color=white)](https://github.com/PAIR-code/what-if-tool/stargazers)  
+- **[What-If Tool](https://github.com/PAIR-code/what-if-tool)** [![GitHub_Stars](https://img.shields.io/github/stars/PAIR-code/what-if-tool?style=social&color=white)](https://github.com/PAIR-code/what-if-tool/stargazers)  
   ❓ **Google's visual interactive model investigation tool.** Allows counterfactual analysis, feature modification, and visual fairness comparison across data subsets.
 
 ---
 
 ### ⚖️ Fairness Auditing & Bias Mitigation
 
-- **[AI Fairness 360 (AIF360)](https://github.com/Trusted-AI/AIF360)** [![GitHub stars](https://img.shields.io/github/stars/Trusted-AI/AIF360?style=social&color=white)](https://github.com/Trusted-AI/AIF360/stargazers)  
+- **[AI Fairness 360 (AIF360)](https://github.com/Trusted-AI/AIF360)** [![GitHub_Stars](https://img.shields.io/github/stars/Trusted-AI/AIF360?style=social&color=white)](https://github.com/Trusted-AI/AIF360/stargazers)  
   ⚖️ **IBM's comprehensive extensible open-source toolkit.** Contains over 70 fairness metrics and 10 bias mitigation algorithms (pre-processing, in-processing, post-processing).
 
-- **[Fairlearn](https://github.com/fairlearn/fairlearn)** [![GitHub stars](https://img.shields.io/github/stars/fairlearn/fairlearn?style=social&color=white)](https://github.com/fairlearn/fairlearn/stargazers)  
+- **[Fairlearn](https://github.com/fairlearn/fairlearn)** [![GitHub_Stars](https://img.shields.io/github/stars/fairlearn/fairlearn?style=social&color=white)](https://github.com/fairlearn/fairlearn/stargazers)  
   💙 **Microsoft's fairness assessment and mitigation toolkit.** Assesses demographic parity, equalized odds, and applies constrained optimization algorithms for bias reduction.
 
-- **[LangFair](https://github.com/cvs-health/langfair)** [![GitHub stars](https://img.shields.io/github/stars/cvs-health/langfair?style=social&color=white)](https://github.com/cvs-health/langfair/stargazers)  
+- **[LangFair](https://github.com/cvs-health/langfair)** [![GitHub_Stars](https://img.shields.io/github/stars/cvs-health/langfair?style=social&color=white)](https://github.com/cvs-health/langfair/stargazers)  
   🏥 **CVS Health's LLM bias testing library.** Evaluates toxicity, stereotyping, allocational harms, and counterfactual fairness in generative AI applications without requiring model weights.
 
-- **[bias-scope](https://github.com/RAINLabLAU/bias_scope)** [![GitHub stars](https://img.shields.io/github/stars/RAINLabLAU/bias_scope?style=social&color=white)](https://github.com/RAINLabLAU/bias_scope/stargazers)  
+- **[bias-scope](https://github.com/RAINLabLAU/bias_scope)** [![GitHub_Stars](https://img.shields.io/github/stars/RAINLabLAU/bias_scope?style=social&color=white)](https://github.com/RAINLabLAU/bias_scope/stargazers)  
   🔬 **Python framework for language model bias across four families of metrics.** Supports embedding (WEAT, SEAT), probability (CrowS-Pairs, AULA), generation, and prompt benchmarks (BBQ).
 
 ---
 
 ### 🛡️ AI Governance & Regulatory Compliance
 
-- **[VerifyWise](https://github.com/verifywise-ai/verifywise)** [![GitHub stars](https://img.shields.io/github/stars/verifywise-ai/verifywise?style=social&color=white)](https://github.com/verifywise-ai/verifywise/stargazers)  
+- **[VerifyWise](https://github.com/verifywise-ai/verifywise)** [![GitHub_Stars](https://img.shields.io/github/stars/verifywise-ai/verifywise?style=social&color=white)](https://github.com/verifywise-ai/verifywise/stargazers)  
   📜 **AI governance, risk, and compliance (GRC) platform.** Central repository for system inventory, risk mapping against EU AI Act, NIST AI RMF, and ISO/IEC 42001.
 
-- **[GovLLM](https://github.com/ai4gov/govllm)** [![GitHub stars](https://img.shields.io/github/stars/ai4gov/govllm?style=social&color=white)](https://github.com/ai4gov/govllm/stargazers)  
+- **[GovLLM](https://github.com/ai4gov/govllm)** [![GitHub_Stars](https://img.shields.io/github/stars/ai4gov/govllm?style=social&color=white)](https://github.com/ai4gov/govllm/stargazers)  
   ⚖️ **On-premise runtime governance framework for LLM systems.** Uses small language model judge panels to continuously audit regulatory criteria locally via Ollama.
 
-- **[FairMind](https://github.com/adhit-r/fairmind)** [![GitHub stars](https://img.shields.io/github/stars/adhit-r/fairmind?style=social&color=white)](https://github.com/adhit-r/fairmind/stargazers)  
+- **[FairMind](https://github.com/adhit-r/fairmind)** [![GitHub_Stars](https://img.shields.io/github/stars/adhit-r/fairmind?style=social&color=white)](https://github.com/adhit-r/fairmind/stargazers)  
   🧠 **AI governance & assurance platform.** Logs signed evaluation evidence for demographic parity and disparate impact to MLflow/Weights & Biases.
 
 ---
@@ -158,7 +158,7 @@ Below are open-source libraries for bias measurement, model interpretability, an
 
 1. 🍴 Fork the repository.
 2. 📝 Add or update entries in `README.md` maintaining star-sorted order within relevant sections.
-3. 💬 Include: Project name, link, GitHub star badge (for open source), brief description, pricing model, and target use case.
+3. 💬 Include: Project name, link, GitHub Stars_Badge (for open source), brief description, pricing model, and target use case.
 4. 🚀 Submit a Pull Request detailing your additions.
 
 ---
